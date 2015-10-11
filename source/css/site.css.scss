@@ -1,0 +1,545 @@
+@charset 'utf-8';
+@import 'settings';
+@import 'fonts';
+@import 'font-awesome-abridged';
+@import 'foundation-abridged';
+
+@mixin italic-text {
+  font-family: "Noto Serif",serif;
+  font-style: italic;
+}
+
+// NOTE the inline-list from Foundation has problems, so we define our own
+@mixin inline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.text {
+  &-primary { color: $primary-color; }
+  &-accent { color: $accent-color; }
+  &-dull { opacity: 0.75; }
+  &-ambiguous {
+    letter-spacing: 0.1ex;
+    display: inline-block;
+    margin-right: -0.1ex;
+  }
+  &-misleading {
+    display: inline-block;
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg);
+  }
+}
+
+div.paragraph {
+  margin-bottom: $paragraph-margin-bottom; // NOTE shifts margin bottom from p to div.paragraph parent
+  > p {
+    margin-bottom: 0; // NOTE shifts margin bottom from p to div.paragraph parent
+    word-spacing: -0.05em;
+    em {
+      @include italic-text;
+      font-size: 0.9375em;
+      word-spacing: 0;
+    }
+  }
+  .fine-print & {
+    color: $monsoon-t;
+    > p {
+      font-size: $paragraph-aside-font-size;
+    }
+  }
+}
+
+input[type='text'], input[type='email'], input[type='tel'], textarea {
+  word-spacing: -0.05em;
+}
+
+button, .button {
+  text-transform: uppercase;
+  line-height: $button-line-height;
+  &.large {
+    padding: 20px 40px;
+  }
+}
+
+body {
+  &.f-topbar-fixed {
+    padding-top: 0 !important;
+  }
+  &:not(.f-topbar-fixed) header.global-nav {
+    background-color: $topbar-shrink-bg-color;
+    @media #{$medium-up} {
+      background-color: transparent; // NOTE prevents background color from flashing on load
+    }
+  }
+}
+
+header.global-nav {
+  background-color: $topbar-shrink-bg-color;
+  padding: 11px 0;
+  @media #{$medium-up} {
+    background-color: transparent;
+    padding: 36px 0;
+    // NOTE exit transition
+    -webkit-transition: padding 0.3s ease;
+            transition: padding 0.3s ease;
+    &.navbar-shrink {
+      background-color: $topbar-shrink-bg-color;
+      // NOTE enter transition
+      -webkit-transition: padding 0.3s ease, background-color 0.15s ease;
+              transition: padding 0.3s ease, background-color 0.15s ease;
+      padding: 21px 0;
+      .top-bar .name h1 {
+        font-size: rem-calc(27);
+      }
+    }
+  }
+  @at-root .top-bar .name h1 {
+    font-size: rem-calc(18); // NOTE font-size used for mobile nav
+    text-transform: none;
+    @media #{$medium-up} {
+      font-size: rem-calc(35);
+      -webkit-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+    }
+    a {
+      font-family: $font-family-cursive;
+      color: $primary-color;
+      em {
+        font-style: normal;
+        &.open {
+          color: $white;
+        }
+        &.devise {
+          position: relative;
+          left: -0.025em;
+        }
+      }
+    }
+  }
+  @at-root .top-bar-section {
+    ul {
+      padding-top: 8px;
+      padding-left: 2px;
+      @media #{$medium-up} {
+        padding-top: 0;
+        padding-left: 0;
+      }
+      li {
+        > a {
+          font-weight: 300;
+          letter-spacing: 0.05em;
+        }
+        @media #{$medium-up} {
+          > a {
+            font-weight: $topbar-link-weight;
+            letter-spacing: 0.1em;
+            word-spacing: -0.035em;
+            position: relative;
+            top: 1px;
+            &::after {
+              content: "";
+              display: block;
+              height: 1px;
+              background-color: $primary-color;
+              width: 0%;
+              -webkit-transition: width 0.25s ease;
+                      transition: width 0.25s ease;
+            }
+          }
+          &.active > a::after {
+            width: 100%;
+            -webkit-transition: width 0.5s ease;
+                    transition: width 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.hero {
+  background: $topbar-shrink-bg-color url("../img/header-bg.jpg") no-repeat;
+  background-position: 25% 0;
+  background-size: cover;
+  min-height: 100%;
+  @media #{$medium-up} {
+    background-position: 50% 0;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 640px;
+    //min-height: 620px;
+    > .row {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+           -ms-flex-align: center;
+      -webkit-align-items: center;
+              align-items: center;
+      height: 100%;
+      padding-top: 250px;
+      //padding-top: 225px;
+    }
+  }
+  color: $white;
+  text-align: center;
+  .content {
+    padding: 225px 0 75px 0;
+  }
+  p.lead-in {
+    margin-bottom: 0;
+    @include italic-text;
+    font-size: rem-calc(22);
+    line-height: 1.15;
+    letter-spacing: -0.0125em;
+  }
+  h1.headline {
+    margin-top: 14px;
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: rem-calc(46);
+    line-height: 1;
+    color: inherit;
+  }
+  @media #{$medium-up} {
+    .content {
+      padding: 0;
+    }
+    p.lead-in {
+      font-size: rem-calc(40);
+    }
+    h1.headline {
+      font-size: rem-calc(75);
+      margin-top: 28px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+article.services nav.local-nav li {
+  padding: 0;
+  > a {
+    display: block;
+    padding: 0.75em 0;
+    font-size: rem-calc(24);
+    @media #{$medium-up} {
+      font-size: rem-calc(28);
+      padding: 1em 0;
+    }
+    font-family: $header-font-family;
+    font-weight: 300;
+    text-transform: uppercase;
+    width: 100%;
+    color: $aluminum-t;
+    -webkit-transition: background-color 0.25s ease-in-out;
+            transition: background-color 0.25s ease-in-out;
+    &:first-letter {
+      color: $primary-color;
+      font-family: $font-family-cursive;
+      font-weight: normal;
+      padding-right: 0.125em;
+      font-size: 1.3333em;
+      line-height: 1;
+    }
+    &:hover {
+      background-color: #f6f6f7;
+    }
+  }
+}
+
+section.service, main > section, main > aside {
+  h2 {
+    letter-spacing: 0.025em;
+    word-spacing: -0.05em;
+    margin-left: -0.05em; // NOTE corrects built-in letter spacing in Work Sans
+    margin-top: 0;
+    //margin-bottom: 0.3334em;
+    margin-bottom: 0.5em;
+    font-size: rem-calc(42);
+  }
+  h3.subheader {
+    @include italic-text;
+    text-transform: none;
+    font-size: rem-calc(20);
+  }
+}
+
+section.service, main > section {
+  padding: 50px 0;
+  @media #{$medium-up} {
+    padding: 100px 0;
+  }
+}
+
+article.services {
+  section {
+    &:nth-of-type(odd) {
+      background-color: #f6f6f7;
+    }
+    @media #{$medium-up} {
+      h2 {
+        font-size: rem-calc(50);
+      }
+    }
+  }
+  figure {
+    margin: 0;
+    img {
+      width: 100%;
+      @media #{$medium-up} {
+        margin-top: -1rem;
+      }
+    }
+  }
+}
+
+main > section.accent {
+  padding: 75px 0;
+  @media #{$medium-up} {
+    padding: 100px 0;
+  }
+  background-color: $highlight-color;
+  div.lead {
+    margin-top: $subheader-top-margin * 1.5;
+    @media #{$medium-up} {
+      margin-top: $subheader-top-margin;
+      margin-bottom: $subheader-bottom-margin;
+    }
+    > p {
+      font-size: rem-calc(19);
+      color: $tuatara-t;
+      line-height: $subheader-line-height;
+    }
+  }
+  .project {
+    margin-top: $paragraph-margin-bottom * 1.5;
+    @media #{$medium-up} {
+      margin-top: 0;
+    }
+  }
+  span.avatar {
+    font-family: $header-font-family;
+    font-weight: 500;
+    color: $jet;
+    background-color: $white;
+    display: inline-block;
+    font-size: rem-calc(35);
+    // NOTE Webkit can't get the em calculations right for line-height, width and height, so fallback to pixels
+    height: 84px; // = 6rem
+    width: 84px;
+    line-height: 84px;
+    border-radius: 100%;
+  }
+  h4.term {
+    text-transform: none;
+    margin-bottom: 12px;
+    font-size: rem-calc(21);
+    font-weight: 700;
+    > a {
+      color: $oil-t;
+      &:hover {
+        text-decoration: underline;
+        //color: $jet-t;
+      }
+    }
+  }
+  .desc > p {
+    color: $tuatara-t;
+    text-align: justify;
+    font-size: rem-calc(16);
+    @media #{$medium-up} {
+      padding: 0 0.5em;
+    } 
+  }
+  .fine-print div.paragraph {
+    color: $charcoal-t;
+    margin-top: $paragraph-margin-bottom;
+    margin-bottom: 0;
+    a {
+      color: $oil-t;
+      &:hover {
+        text-decoration: underline;
+        //color: $jet-t;
+      }
+    }
+  }
+}
+
+main > aside {
+  padding: 50px 0 0 0;
+  @media #{$medium-up} {
+    padding: 75px 0 25px 0;
+  }
+  h2 {
+    margin-bottom: 0.3334em;
+  }
+  h3.subheader {
+    font-family: $header-font-family;
+    font-size: rem-calc(18);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $aluminum-t;
+    @media #{$medium-up} {
+      margin-bottom: 10px;
+    }
+  }
+  @at-root &#clients .logos {
+    float: none; // NOTE allows margins to collapse below breakpoint
+    @media #{$medium-up} {
+      float: left;
+    }
+  }
+  img.logo {
+    margin: 3rem auto;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+section#say-hello {
+  background: $jet url("../img/say-hello-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  h2 {
+    color: $white;
+  }
+  h3.subheader {
+    color: $monsoon;
+    margin-bottom: $paragraph-margin-bottom * 2;
+    @media #{$medium-up} {
+      margin-bottom: 75px;  
+    }
+  }
+  form {
+    input:not([type]), #{text-inputs(all, 'input')} {
+      padding: 20px;
+      line-height: 20px;
+      height: auto;
+    }
+    textarea {
+      height: 236px;
+    }
+  }
+}
+
+ul.social {
+  @include inline-list;
+  a {
+    display: inline-block;
+    font-family: FontAwesome,serif; // NOTE circumvents issue w/ built-in line height of body font
+    font-size: rem-calc(20);
+    // NOTE Webkit can't get the em calculations right for line-height, width and height, so fallback to pixels
+    width: 42px; // = 3rem
+    height: 42px;
+    line-height: 42px;
+    border-radius: 100%; // NOTE 50% should work, but Webkit screws it up
+    background-color: $jet;
+    color: $white;
+    -webkit-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}
+
+ul.links {
+  @include inline-list;
+  > li {
+    line-height: 3;
+  }
+}
+
+.profile {
+  margin-bottom: 3rem;
+  span.headshot-frame {
+    display: inline-block;
+    position: relative;
+    width: 75%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.25em;
+      right: -0.25em;
+      bottom: -0.25em;
+      left: -0.25em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.2) inset;
+      border-radius: 50%;
+      border: 0.5em solid $jet;
+    }
+  }
+  img.headshot {
+    border-radius: 50%;
+    // NOTE use the following only if not using the frame
+    // border: 0.5em solid $primary-color-shaded; // or #d9d8d7
+    // width: 75%;
+  }
+  h4.name {
+    text-transform: none;
+    font-size: rem-calc(20);
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  p.role {
+    font-size: rem-calc(15);
+    color: $monsoon-t;
+    margin-bottom: 1rem;
+  }
+}
+
+footer {
+  background-color: $gray22;
+  color: $white;
+  padding: 25px 0;
+  .copyright {
+    line-height: 2.5;
+    margin-top: 0.25rem;
+    text-align: center;
+  }
+  ul, p {
+    font-size: 1rem;
+  }
+  ul.social {
+    margin: 1em 0;    
+    @media #{$medium-up} {
+      margin: 0;
+    }
+  }
+}
+
+@media print {
+  header.global-nav {
+    background-color: transparent !important;
+    .toggle-topbar {
+      display: none !important;
+    }
+  }
+  main section {
+    background-color: transparent !important;
+    page-break-before: always;
+  }
+  article.services aside,
+  section#say-hello,
+  span.avatar,
+  span.headshot-frame::before {
+    display: none !important;
+  }
+}

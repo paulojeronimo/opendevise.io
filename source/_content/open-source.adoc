@@ -1,0 +1,28 @@
+= Open Source Leadership
+:idprefix:
+:period: &period;
+
+[.lead]
+We understand the innovative power of Open Source.
+We use Open Source as the foundation of our business and continuously invest in it.
+As part of our mission to shape the future of technical writing and publishing, we lead or contribute to the following Open Source projects.
+
+== Projects
+
+http://asciidoctor.org[Asciidoctor]::
+Asciidoctor is a comprehensive, user-friendly publishing toolchain for the AsciiDoc writing format.
+As the leading implementation of AsciiDoc, Asciidoctor drives the syntax forward and promotes its usage.
+With Asciidoctor, you can write once and publish your content everywhere.
+
+http://markdalgleish.com/projects/bespoke.js[Bespoke{period}js]::
+Bespoke.js is a lean & modular HTML5-based presentation library for modern web browsers.
+By combining a rich ecosystem with the boundless possibilities of the web, you can use it to create visuals that amplify your presentation and make your message resonate.
+
+https://github.com/opendevise/editions[Editions]::
+Editions is a toolchain for publishing periodicals in EPUB3, KF8 & PDF from content managed using GitHub repositories and composed in AsciiDoc.
+Editions helps attract authors to your publication by making the editorial experience a pleasant and rewarding one.
+
+[#funding]
+== R&D Funding
+
+R&D funding for these Open Source projects is provided by the https://salt.bountysource.com/teams/asciidoctor[Asciidoctor Salt campaign] and through dedicated contracts.

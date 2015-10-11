@@ -1,0 +1,23 @@
+doctype 5
+html lang='en'
+  head
+    meta charset='utf-8'
+    - [:description, :keywords, :author, :copyright].each do |meta_name|
+      - if (meta_content = config[%(site_#{meta_name}).to_sym])
+        meta name=meta_name content=meta_content
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'
+    title = current_page.data.title || config.site_title || 'Untitled'
+    - if app.environment? :production
+      = "\n" if pretty?
+      |<script>!function(l,o,d){if(l.host==o+".github.io"){l.replace(l.protocol+"//"+d+l.pathname.replace(new RegExp("^/"+d.replace(".","\\.")+"/"),"/")+l.search+l.hash)}}(location,"opendevise","opendevise.io")</script>
+    = "\n" if pretty?
+    = (stylesheet_link_tag :site).sub(' type="text/css"', '').sub(' />', '>')
+  body class = page_classes
+    = "\n" if pretty?
+    = yield
+    = "\n" if pretty?
+    = (javascript_include_tag :site).sub(' type="text/javascript"', '')
+    - if app.environment? :production
+      = "\n" if pretty?
+      = google_analytics_universal_tag.sub(' type="text/javascript"', '')

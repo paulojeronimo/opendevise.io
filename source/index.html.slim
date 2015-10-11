@@ -1,0 +1,148 @@
+---
+title: OpenDevise
+services: [Content, Strategy, Development]
+clients: [Tomitribe, DataStax, Neo4j, Gradle]
+---
+header.global-nav.fixed.contain-to-grid role='main'
+  nav.top-bar role='navigation' data={ topbar: true }
+    ul.title-area
+      li.name: h1: a href='#'
+        em.open Open
+        em.devise Devise
+      li.toggle-topbar.menu-icon: a href='#': span
+    section.top-bar-section
+      ul.right
+        li data-nav-href='how-we-help': a href='#how-we-help' How We Help
+        li data-nav-href='who-we-are': a href='#who-we-are' Who We Are
+        li data-nav-href='say-hello': a href='#say-hello' Say Hello
+section.hero role='banner'
+  .row
+    .columns.large-12
+      .content
+        /p.lead-in Don’t just talk at your users.
+        p.lead-in Don’t talk at your users.
+        h1.headline Connect with them.
+        a.cta.button.radius.large href='#how-we-help' Tell me how
+main.sectioned role='main'
+  article class='services' data-nav-dest='how-we-help'
+    aside.row
+      nav.local-nav role='navigation'
+        /ul class=[%(small-block-grid-#{current_page.data.services.length}), 'text-center']
+        ul.small-block-grid-1 class=[%(medium-block-grid-#{current_page.data.services.length}), 'text-center']
+          - current_page.data.services.each do |service_name|
+            li: a href="#service-#{service_name.downcase}" = service_name
+    / temporary #how-we-help placeholder until we have a better target
+    #how-we-help
+    - services_doc = Asciidoctor.load_file %(#{@app.source_dir}/_content/services.adoc), safe: :safe
+    - current_page.data.services.each_with_index do |service_name, idx|
+      - service_content = services_doc.find_by(id: (service_id = service_name.downcase)).first
+      section.service id="service-#{service_id}"
+        .row
+          .columns.medium-6 class=(idx.odd? ? 'medium-push-6' : nil)
+            h2 = service_content.title
+            = service_content.blocks.map(&:convert) * "\n"
+          .columns.medium-6.text-center class=(idx.odd? ? 'medium-pull-6' : nil)
+            figure: img src="/img/service/#{service_id}.png" alt=service_name
+  - about_doc = Asciidoctor.load_file %(#{@app.source_dir}/_content/who-we-are.adoc), safe: :safe
+  section#who-we-are data-nav-dest='who-we-are'
+    .row
+      .columns.large-12.text-center
+        h2 = about_doc.doctitle
+        h3.subheader = about_doc.find_by(context: :preamble)[0].blocks[0].content
+    .row
+      .columns.small-8.small-centered.medium-4.medium-offset-2.medium-uncentered.text-center
+        .profile
+          span.headshot-frame
+            img.headshot src='/img/team/sarah.jpg' alt='Sarah'
+          h4.name Sarah White
+          p.role User Advocate &amp; Storyteller
+          ul.social
+            li: a href='https://twitter.com/carbonfray': i.fa.fa-twitter
+            li: a href='https://twitter.com/graphitefriction': i.fa.fa-github
+            li: a href='https://www.linkedin.com/pub/sarah-white/58/863/660': i.fa.fa-linkedin
+      .columns.small-8.small-centered.medium-4.medium-uncentered.text-center
+        .profile
+          span.headshot-frame
+            img.headshot src='/img/team/dan.jpg' alt='Dan'
+          h4.name Dan Allen
+          p.role Hacker &amp; Content Composer
+          ul.social
+            li: a href='https://twitter.com/mojavelinux': i.fa.fa-twitter
+            li: a href='https://twitter.com/mojavelinux': i.fa.fa-github
+            li: a href='https://www.linkedin.com/in/mojavelinux': i.fa.fa-linkedin
+    .row
+      .columns.medium-8.medium-centered
+        - about_doc.sections.each do |section|
+          = section.blocks.map(&:convert) * "\n"
+  - oss_doc = Asciidoctor.load_file %(#{@app.source_dir}/_content/open-source.adoc), safe: :safe
+  section.accent#open-source
+    .row.text-center
+      .columns.medium-10.medium-centered
+        h2 = oss_doc.doctitle
+        = oss_doc.find_by(context: :preamble)[0].blocks[0].convert
+    .row.text-center
+      - oss_doc.find_by(id: 'projects')[0].blocks[0].items.each_with_index do |(name, desc), idx|
+        - name = name.first
+        .columns.small-10.small-centered.medium-4.medium-uncentered
+          .project
+            span.avatar = name.text.match(/<a[^>]*>(.*?)<\/a>/)[1].chr
+            h4.term = name.text
+            .desc.paragraph: p = desc.text
+    .row.text-center
+      .columns.medium-10.medium-centered.fine-print
+        = oss_doc.find_by(id: 'funding')[0].blocks.map(&:convert) * "\n"
+  aside#clients
+    .row.text-center
+      .columns.large-12
+        h2 Our Clients
+        h3.subheader We’re proud to have worked with
+    .row
+      - col_width = (12.0 / current_page.data.clients.length).floor
+      - current_page.data.clients.each do |client_name|
+        - client_id = client_name.downcase
+        .columns.logos class="medium-#{col_width}"
+          img.logo src="/img/client/#{client_id}.png" width=200 height=50 alt=client_name
+  section#say-hello data-nav-dest='say-hello'
+    .row.text-center
+      .columns.large-12
+        h2 Say Hello
+        h3.subheader Let’s chat about how we can make your content work better for you.
+    .row
+      .columns.large-12
+        form#contactForm action='//formspree.io/hello@opendevise.io' method='POST' name='sentMessage'
+          input type='hidden' name='_subject' value='Hello, OpenDevise!'
+          input type='text' name='_gotcha' aria-hidden='true' style='display: none'
+          .row
+            .columns.medium-6
+              div
+                input.radius type='text' name='name' placeholder='Your Name *'
+              div
+                input.radius type='email' name='email' placeholder='Your Email *'
+              div
+                input.radius type='tel' name='phone' placeholder='Your Phone *'
+            .columns.medium-6
+              textarea.radius name='message' placeholder='Your Message *'
+          .row.text-center
+            .columns.large-12
+              button.button.radius.large type='submit'
+                'Send message
+                i.fa.fa-send style='padding-left: 0.25em'
+footer role='contentinfo'
+  .row
+    .columns.medium-4
+      .copyright
+        |
+          &copy; #{Time.now.year} OpenDevise Inc.<br>
+          <span>Write us:</span> hello@opendevise.io<br>
+          <span>Call us:</span> +1 720–399–6677
+    .columns.medium-4.text-center
+      ul.social
+        li: a href='https://twitter.com/opendevise': i.fa.fa-twitter
+        li: a href='https://github.com/opendevise': i.fa.fa-github
+        li: a href='https://www.linkedin.com/vsearch/p?company=OpenDevise+Inc': i.fa.fa-linkedin
+    .columns.medium-4.text-center
+      ul.links
+        li Powered by Open Source.
+      /ul.links
+        li: a href='#' ...
+        li: a href='#' ...

@@ -1,0 +1,9 @@
+{
+  "name": "opendevise.io",
+  "version": "1.0.0",
+  "private": "true",
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "foundation": "zurb/foundation#~5.5.3"
+  }
+}

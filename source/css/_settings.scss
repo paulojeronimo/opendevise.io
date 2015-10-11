@@ -1,0 +1,82 @@
+@import 'foundation/functions';
+
+$primary-color: #ffca26;
+$primary-color-shaded: #ffca40;
+$highlight-color: #ffd85c; // = rgb(255, 216, 92)
+$secondary-color: #cccbca;
+$accent-color: #f15424;
+
+$white:    #fff;
+$iron:     #ccc; $iron-t:     rgba(0,0,0,0.2);
+$aluminum: #999; $aluminum-t: rgba(0,0,0,0.4);
+$jumbo:    #888; $jumbo-t:    rgba(0,0,0,0.465);
+$monsoon:  #777; $monsoon-t:  rgba(0,0,0,0.535);
+$steel:    #666; $steel-t:    rgba(0,0,0,0.6);
+$charcoal: #555; $charcoal-t: rgba(0,0,0,0.665);
+$tuatara:  #444; $tuatara-t:  rgba(0,0,0,0.735);
+$oil:      #333; $oil-t:      rgba(0,0,0,0.8);
+$jet:      #222; $jet-t:      rgba(0,0,0,0.865);
+$black:    #000;
+$gray22:   #383838;
+
+$font-family-serif: "Habibi",serif;
+$font-family-cursive: "Kaushan Script",cursive;
+
+$base-font-size: 14px;
+$base-line-height: (20 / 14);
+$rem-base: $base-font-size;
+$row-width: rem-calc(1170);
+
+$body-font-family: $font-family-serif;
+$body-font-color: $oil-t;
+
+$header-font-family: "Work Sans",sans-serif;
+$header-font-color: $body-font-color;
+$header-font-weight: 300;
+$header-line-height: 1.1;
+$header-top-margin: 20px;
+$header-bottom-margin: 10px;
+
+$subheader-font-color: $steel-t; // $monsoon-t
+$subheader-line-height: 1.65;
+$subheader-top-margin: $header-top-margin;
+$subheader-bottom-margin: rem-calc(75);
+
+$paragraph-font-size: rem-calc(17);
+
+$topbar-bg: none;
+$topbar-shrink-bg-color: $jet;
+$topbar-dropdown-bg: none;
+$topbar-height: rem-calc(28);
+//$topbar-link-color-hover: $primary-color-shaded;
+$topbar-link-color-hover: $primary-color;
+$topbar-link-bg-color-hover: transparent;
+$topbar-link-bg-hover: none;
+$topbar-link-bg-active: none;
+$topbar-link-bg-active-hover: none;
+$topbar-link-font-family: $header-font-family;
+$topbar-link-weight: 500;
+$topbar-link-text-transform: uppercase;
+$topbar-link-padding: rem-calc(15);
+$topbar-link-font-size: inherit;
+
+$button-font-family: $header-font-family;
+$button-font-weight: 700;
+$button-line-height: $base-line-height;
+$button-font-lrg: rem-calc(18);
+$button-border-width: 3px;
+$button-border-color: $white;
+$button-radius: 8px;
+$button-bg-color: transparent;
+$button-bg-hover: $iron-t;
+$button-margin-bottom: 0;
+
+$form-spacing: rem-calc(25);
+$input-font-color: $charcoal-t;
+$input-placeholder-font-color: $monsoon-t; // was $aluminum-t, but felt too light
+$input-border-color: $iron;
+$input-focus-border-color: $primary-color;
+$input-border-radius: 4px;
+$input-box-shadow: rgba(0,0,0,0.075) 0px 1px 1px 0px inset;
+//transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+//on focus: box-shadow: none;

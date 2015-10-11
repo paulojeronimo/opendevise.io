@@ -1,0 +1,91 @@
+= Services
+:idprefix:
+:icons: font
+
+//Users give the platform legitimacy; credibility
+
+ifdef::env-browser[[#content_]]
+== Content
+
+Words have *impact*.
+What impact do your words have?
+Is it the right impact?
+//Is it enough?
+//Are your words reaching the right people?
+Do your words reach the right people?
+//alt2) Do the words reach the right people?
+//Do they tell a story in which your user is the hero?
+Do they tell a story with your user as the hero?
+Do they color a vision for the future?
+Or are you driving people away using [.text-dull]#dull#, [.text-ambiguous]#ambiguous# or [.text-misleading]#misleading# words?
+
+We icon:heart[role=text-accent,alt=love] words.
+We love to make them right, and we love to make them play well together.
+Words are powerful elements in your quest to connect with users.
+To engage current and future users, you need to choose words wisely and with intent.
+//Whether it's to engage current or future users, you need to choose words wisely and with intent.
+That intent comes from research.
+//Following our user-centric process, we help you get into the mindset of your users by talking to them and discovering _who they are_ and _what they need_.
+Following our user-centered process, we dive into the mindset of your users to discover _the words they use_ and _the information they need_.
+
+Users search for words.
+Can they find the answers they seek?
+From you?
+Or are you keeping StackOverflow in business?
+Is essential knowledge scattered across Google Docs, blogs and wikis or, worse, stuck in the heads of developers?
+//Does your content have them tied up in knots?
+We help you extract that information and distill it into a compelling narrative that not only informs and educates your users, but also captivates and delights them.
+
+No one can use words to document your products or services better than you.
+Why are you letting everyone else do the talking?
+//What's your message? Let's find it.
+Let's make your content work for your users and, in turn, make your business a success.
+
+== Strategy
+
+//Content can generate tremendous value, but creating it isn't cheap.
+Content can generate tremendous value, but creating it isn't cheap.
+That's why it's crucial to know _what content to create_ and _who that content targets_.
+Your content needs a strategy.
+
+*Assumptions are dangerous.*
+Without a keen understanding of your goals and your users`' needs, you'll struggle to connect with your audience.
+//Actions must come from knowledge.
+Actions must come from research.
+
+*Knowledge is control.*
+We ask the right people the right questions.
+We analyze internal and external objectives, processes and perceptions.
+We devise content and technical strategies that seamlessly align business objectives and user needs.
+From there, you can confidently launch intiatives that resonate with your users.
+The result: success.
+
+*Intense preparation yields meteoric success.*
+Ideas alone don't convince people to invest.
+You must show them that your products or services align with their needs.
+And you must compel them to act.
+Only then can you achieve your business goals.
+
+Through research and planning, we help you devise a content strategy that transforms erroneous, expensive content into vibrant, valuable messaging.
+
+== Development
+
+Is internal workflow strife causing your content to suffer?
+A little automation goes a long way.
+The right code can save you from repeating yourself or stepping on toes.
+Escape the horror of revising the same text in multiple places!
+//Write it once, write it well, then transform and publish it everywhere.
+//We can help get your content out into the world so it can do powerful things for you.
+We can teach you how to write content once, write it well, transform it, then publish it everywhere.
+
+We treat docs with the same pragmatism and care as code.
+We lead and sponsor the development of the Asciidoctor project and contribute to Bespoke.js in pursuit of an easier, more engaging, more productive way to write and present content.
+// lightweight markup or writing formats?
+Our development toolbox is stocked with build tools, dynamic languages, lightweight markup, site generators, modern web technologies and libraries enough to displace all the books.
+We put this arsenal of technology to work for you to make your content beautiful both inside and out.
+
+As leaders of the Asciidoctor project, we know how to extract the most value from content and put it to work for you and your business.
+If your message resonates, people won't just learn about your products and services, they'll invest in them.
+Shouldn't you employ all the human and computing power you can to make those messages?
+That's what we help you do.
+Our development services amplify your content.

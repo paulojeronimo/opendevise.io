@@ -1,0 +1,29 @@
+= Who We Are
+:idprefix:
+
+We love Open Source.
+And we love content.
+ifdef::basebackend-html[+++<br class="show-for-medium-up">+++]
+But what we love most is creating content for Open Source.
+
+== Our Experience
+
+OpenDevise brings more than two decades of experience cultivating Open Source software communities and accelerating businesses built on them.
+We excel at communicating messages that engage users so they're inspired to become members of your tribe and join you on your journey.
+//Our services are focused on helping clients define a content and community strategy that sparks excitement in the technology or platform and moves the community to participate and promote it.
+
+////
+== Our Approach
+
+We take an honest, open and transparent approach to planning and communication.
+//We look critically at how audiences respond to content and culture.
+//Backed by user research, we use that information to make adaptations to ensure the audiences`' experiences are meaningful, memorable and authentic.
+We believe strongly that involving the community from the outset and keeping them engaged throughout the process is not only critical for success, but also diversifies ideas.
+//We believe strongly in involving the community from the outset and keeping them engaged throughout the process.
+//It's not only critical for success, but it also diversifies ideas.
+////
+
+== How We Measure Success
+
+We measure success not only by how many people adopt a technology, but by how many become influencers and leaders and how effectively they circulate the message through story.
+//Your community's success translates directly into success for your company.

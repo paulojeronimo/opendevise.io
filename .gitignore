@@ -1,0 +1,6 @@
+/attic/
+/build/
+/vendor/
+/Gemfile.lock
+/.ruby-version
+/.ruby-gemset

@@ -1,0 +1,12 @@
+// NOTE font-awesome doesn't put its partials in a folder, so reference import from Bower root
+@import 'font-awesome/scss/variables';
+/*! Font Awesome v#{$fa-version} by @davegandy | Font: SIL OFL 1.1, CSS: MIT License | fontawesome.io */
+@import 'font-awesome/scss/mixins';
+@import 'font-awesome/scss/path';
+@import 'font-awesome/scss/core';
+@import 'font-awesome/scss/larger';
+.#{$fa-css-prefix}-heart:before { content: $fa-var-heart; }
+.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
+.#{$fa-css-prefix}-github:before { content: $fa-var-github; }
+.#{$fa-css-prefix}-linkedin:before { content: $fa-var-linkedin; }
+.#{$fa-css-prefix}-send:before { content: $fa-var-paper-plane; }
