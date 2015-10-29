@@ -4,6 +4,7 @@ set :site_description, 'OpenDevise is a content strategy and development agency 
 set :site_keywords, 'content,strategy,content strategy,development,Open Source,community,Asciidoctor,AsciiDoc'
 set :site_author, 'OpenDevise Inc.'
 set :site_copyright, %(OpenDevise Inc. (c) #{Time.now.year})
+set :site_twitter, '@opendevise'
 
 # Site structure
 set :css_dir, 'css'

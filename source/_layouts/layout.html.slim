@@ -1,3 +1,6 @@
+- page_title = current_page.data.title || config.site_title
+- page_path = current_page.request_path.sub /\/index.html$/, ''
+- page_image = 'http://opendevise.io/img/opendevise-icon-og.png'
 doctype 5
 html lang='en'
   head
@@ -6,8 +9,17 @@ html lang='en'
       - if (meta_content = config[%(site_#{meta_name}).to_sym])
         meta name=meta_name content=meta_content
     meta name='viewport' content='width=device-width, initial-scale=1.0'
+    meta name='og:title' content=page_title
+    meta name='og:type' content='website'
+    meta name='og:image' content=page_image
+    meta name='og:url' content=page_path
+    - if config.site_description
+      meta name='og:description' content=config.site_description
+    meta name='twitter:card' content='summary'
+    meta name='twitter:image' content=page_image
+    meta name='twitter:site' content=config.site_twitter
     link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'
-    title = current_page.data.title || config.site_title || 'Untitled'
+    title = page_title
     - if app.environment? :production
       = "\n" if pretty?
       |<script>!function(l,o,d){if(l.host==o+".github.io"){l.replace(l.protocol+"//"+d+l.pathname.replace(new RegExp("^/"+d.replace(".","\\.")+"/"),"/")+l.search+l.hash)}}(location,"opendevise","opendevise.io")</script>
