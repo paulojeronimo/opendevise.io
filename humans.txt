@@ -1,0 +1,19 @@
+/* opendevise.io */
+
+/* TEAM */
+User Advocate & Storyteller: Sarah White
+Twitter: @carbonfray
+From: Denver, CO
+
+Hacker & Content Composer: Dan Allen
+Twitter: @mojavelinux
+From: Denver, CO
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3, JavaScript
+Components: Foundation, Normalize, jQuery, Font Awesome, Google Fonts, Google Analytics
+Software: Linux, Chrome, Firefox, Ruby, Middleman, Asciidoctor, Tilt, Sprockets, Slim, Sass, Git, VIM, Darktable, Inkscape, Gimp, Rake, RVM, Bundler, Travis CI, icoutils
+Source: https://github.com/opendevise/opendevise.io
+Contact: info [at] opendevise.io
+Twitter: @opendevise
