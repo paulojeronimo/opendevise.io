@@ -51,6 +51,7 @@ div.paragraph {
       @include italic-text;
       font-size: 0.9375em;
       word-spacing: 0;
+      letter-spacing: 0.01em;
     }
   }
   .fine-print & {
@@ -203,7 +204,7 @@ section.hero {
     @include italic-text;
     font-size: rem-calc(22);
     line-height: 1.15;
-    letter-spacing: -0.0125em;
+    //letter-spacing: -0.0125em;
   }
   h1.headline {
     margin-top: 14px;
