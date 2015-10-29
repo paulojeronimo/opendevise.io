@@ -29,9 +29,10 @@ That intent comes from research.
 Following our user-centered process, we dive into the mindset of your users to discover _the words they use_ and _the information they need_.
 
 Users search for words.
-Can they find the answers they seek?
+Are they finding the answers they seek?
 From you?
-Or are you keeping StackOverflow in business?
+//Or are you keeping StackOverflow in business?
+Or do you keep StackOverflow in business?
 Is essential knowledge scattered across Google Docs, blogs and wikis or, worse, stuck in the heads of developers?
 //Does your content have them tied up in knots?
 We help you extract that information and distill it into a compelling narrative that not only informs and educates your users, but also captivates and delights them.
@@ -74,9 +75,8 @@ Is internal workflow strife causing your content to suffer?
 A little automation goes a long way.
 The right code can save you from repeating yourself or stepping on toes.
 Escape the horror of revising the same text in multiple places!
-//Write it once, write it well, then transform and publish it everywhere.
-//We can help get your content out into the world so it can do powerful things for you.
 We can teach you how to write content once, write it well, transform it, then publish it everywhere.
+//We can help get your content out into the world so it can do powerful things for you.
 
 We treat docs with the same pragmatism and care as code.
 We lead and sponsor the development of the Asciidoctor project and contribute to Bespoke.js in pursuit of an easier, more engaging, more productive way to write and present content.
