@@ -25,7 +25,7 @@ html lang='en'
       |<script>!function(l,o,d){if(l.host==o+".github.io"){l.replace(l.protocol+"//"+d+l.pathname.replace(new RegExp("^/"+d.replace(".","\\.")+"/"),"/")+l.search+l.hash)}}(location,"opendevise","opendevise.io")</script>
     = "\n" if pretty?
     = (stylesheet_link_tag :site).sub(' type="text/css"', '').sub(' />', '>')
-  body class = page_classes
+  body.antialiased class = page_classes
     = "\n" if pretty?
     = yield
     = "\n" if pretty?
