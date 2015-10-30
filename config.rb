@@ -1,6 +1,6 @@
 # Site content
 set :site_title, 'OpenDevise'
-set :site_description, 'OpenDevise is a content strategy and development agency that helps you better understand your users and produce more effective content that drives adoption of your technology.'
+set :site_description, 'OpenDevise is a content strategy and development firm that helps you understand your users and produce effective content that drives the adoption of your technology.'
 set :site_keywords, 'content,strategy,content strategy,development,Open Source,community,Asciidoctor,AsciiDoc'
 set :site_author, 'OpenDevise Inc.'
 set :site_copyright, %(OpenDevise Inc. (c) #{Time.now.year})
