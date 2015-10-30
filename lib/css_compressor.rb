@@ -6,6 +6,6 @@ class CssCompressor
     css_ast = ::Sass::SCSS::CssParser.new(css_text, 'middleman-css-input', 1).parse
     css_ast.options = options.merge style: :compressed
     # NOTE gsub adds endlines for readability
-    css_ast.render.gsub(/(}|\*\/)(?!(?:}|\/"))/, %(\\1\n)).rstrip
+    css_ast.render.gsub(/(?:}|\*\/)(?!(?:}|\/"))/, %(\\0\n)).rstrip
   end
 end
