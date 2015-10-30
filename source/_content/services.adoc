@@ -52,7 +52,8 @@ Your content needs a strategy.
 *Assumptions are dangerous.*
 Without a keen understanding of your goals and your users`' needs, you'll struggle to connect with your audience.
 //Actions must come from knowledge.
-Actions must come from research.
+//Actions must come from research.
+Actions must stem from research.
 
 *Knowledge is control.*
 We ask the right people the right questions.
@@ -80,8 +81,8 @@ We can teach you how to write content once, write it well, transform it, then pu
 
 We treat docs with the same pragmatism and care as code.
 We lead and sponsor the development of the Asciidoctor project and contribute to Bespoke.js in pursuit of an easier, more engaging, more productive way to write and present content.
-// lightweight markup or writing formats?
-Our development toolbox is stocked with build tools, dynamic languages, lightweight markup, site generators, modern web technologies and libraries enough to displace all the books.
+// lightweight markup, writing formats or markup formats?
+Our development toolbox is stocked with build tools, dynamic languages, markup formats, site generators, modern web technologies and libraries enough to displace all the books.
 We put this arsenal of technology to work for you to make your content beautiful both inside and out.
 
 As leaders of the Asciidoctor project, we know how to extract the most value from content and put it to work for you and your business.
