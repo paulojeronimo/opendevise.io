@@ -4,9 +4,9 @@
 
 [.lead]
 We understand the innovative power of Open Source.
-//!Our business is deeply rooted in Open Source and we continuously invest in it.
+//! Our business is deeply rooted in Open Source and we continuously invest in it.
 Our business is built on Open Source and we continuously invest in it.
-//!As part of our mission to shape the future of technical writing and publishing, we lead or contribute to the following Open Source projects.
+//! As part of our mission to shape the future of technical writing and publishing, we lead or contribute to the following Open Source projects.
 As part of our mission to shape the future of technical writing and publishing, we lead or contribute to the following projects.
 
 == Projects

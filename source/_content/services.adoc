@@ -1,8 +1,10 @@
+////
+.Additional concepts
+- Users give the platform legitimacy; credibility
+////
 = Services
 :idprefix:
 :icons: font
-
-//Users give the platform legitimacy; credibility
 
 ifdef::env-browser[[#content_]]
 == Content
@@ -11,9 +13,9 @@ Words have *impact*.
 What impact do your words have?
 Is it the right impact?
 //Is it enough?
-//Are your words reaching the right people?
+//! Are your words reaching the right people?
+//! Do the words reach the right people?
 Do your words reach the right people?
-//alt2) Do the words reach the right people?
 //Do they tell a story in which your user is the hero?
 Do they tell a story with your user as the hero?
 Do they color a vision for the future?
