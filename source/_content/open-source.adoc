@@ -1,6 +1,6 @@
 = Open Source Leadership
 :idprefix:
-:period: &period;
+:period: &#46;
 
 [.lead]
 We understand the innovative power of Open Source.
