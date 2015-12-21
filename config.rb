@@ -29,15 +29,16 @@ helpers do
 end
 
 # Wire Sprockets to Bower
-after_configuration {
+after_configuration do
   @bower_config = JSON.parse(IO.read %(#{root}/.bowerrc))
   sprockets.append_path File.join root, @bower_config['directory']
   %w(foundation/scss font-awesome/scss).each {|path|
     sprockets.append_path File.join root, @bower_config['directory'], path
   }
   #sprockets.css_compressor = ...
-}
+end
 
+# NOTE: The `server` command defaults to the :development environment.
 configure :development do
   activate :livereload if ENV['LIVE_RELOAD']
 end
@@ -49,6 +50,7 @@ end
 #  activate :asset_host, host: Proc.new {|asset| (asset.start_with? '//') ? '' : '/opendevise.io' }, sources: %w(.html)
 #end
 
+# NOTE: The `build` command defaults to the :production environment.
 # http://opendevise.io
 configure :production do
   config.slim[:indent] = ''
