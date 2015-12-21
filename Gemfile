@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rake', '10.4.2', require: false
 
-gem 'middleman', '4.0.0'
+#gem 'middleman', '4.0.0'
+gem 'middleman', '4.0.0.rc.1'
 gem 'middleman-sprockets', '4.0.0.rc.1'
 # TODO only load middleman-livereload if dev group is enabled
 gem 'middleman-livereload', '3.4.5'
