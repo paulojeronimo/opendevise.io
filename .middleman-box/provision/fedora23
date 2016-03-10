@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Instalando pacotes extras ..."
+sudo dnf -y install npm

@@ -1,0 +1,6 @@
+cd /vagrant
+set -x
+sudo npm install -g bower
+bower install
+bundle install
+bundle exec middleman server
